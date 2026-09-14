@@ -1,137 +1,129 @@
-# 基于数字反相器的卷积运算
+# Convolution Computation Based on Digital Inverters
 
-基于 Cadence Virtuoso 的模拟卷积计算电路设计。项目使用数字反相器作为小信号放大单元，结合开关电容阵列实现输入数据与卷积核权重的乘加运算；输入、输出接口采用理想模型完成数字量与模拟电压之间的转换。
+This project implements an analog convolution computing circuit based on Cadence Virtuoso. Digital inverters are used as small-signal amplifiers, while switched-capacitor arrays perform multiplication and accumulation of input data and convolution-kernel weights. Ideal interface models are used to convert between digital values and analog voltages.
 
-## 项目目标
+## Project Objectives
 
-- 使用反相器作为核心放大器件。
-- 对 `2 x 3` 输入矩阵和 `1 x 2` 卷积核进行模拟卷积计算。
-- 通过输入转换器和输出采样转换器实现数字输入、数字输出接口。
-- 在满足精度和功耗要求的同时，实现单周期卷积计算。
+- Use digital inverters as the core amplifier elements.
+- Perform analog convolution on a `2 x 3` input matrix using a `1 x 2` kernel.
+- Provide digital input and digital output interfaces through input and sampled-output converters.
+- Complete the convolution calculation within a single clock cycle while meeting accuracy and power requirements.
 
-## 系统结构
+## System Architecture
 
-顶层卷积器 `CNN` 由以下模块组成：
+The top-level `CNN` convolution module consists of:
 
-1. **输入转换器**：将外部输入 `x11 ~ x23` 缩放为核心所需的 `vin_11 ~ vin_23`。
-2. **4 个 `inv_adder` 核心单元**：分别计算输出矩阵中的 `y11、y12、y21、y22`。
-3. **输出转换器**：以反相器交流地为参考，对模拟输出进行采样保持，并转换为可直接读取的数字结果。
-
-计算关系如下：
+1. **Input converter**: Scales external inputs `x11 ~ x23` to the `vin_11 ~ vin_23` signals required by the core circuit.
+2. **Four `inv_adder` core units**: Compute the four output values `y11`, `y12`, `y21`, and `y22`.
+3. **Output converter**: Uses the inverter common-mode reference to sample and hold the analog outputs and convert them into readable digital results.
 
 ```text
-输入矩阵：       x11 x12 x13
-                 x21 x22 x23
+Input matrix:     x11 x12 x13
+                  x21 x22 x23
 
-卷积核：         k1  k2
+Convolution kernel: k1  k2
 
-输出矩阵：       y11 y12
-                 y21 y22
+Output matrix:    y11 y12
+                  y21 y22
 ```
 
-每个输出点由相邻的两个输入与卷积核权重完成乘加运算。
+Each output is calculated from two adjacent input values and the two kernel weights.
 
-## 接口与关键参数
+## Interfaces and Key Parameters
 
-### 输入转换器
+### Input Converter
 
-外部输入采用 `1 V` 表示数字量 `1`，经过缩放后送入反相器核心：
+The external interface uses `1 V` to represent the digital value `1`. The input is scaled before entering the inverter core:
 
 ```text
 vin_ij = 0.02 x x_ij
 ```
 
-核心输入 LSB 为 `20 mV`。
+The resulting core input LSB is `20 mV`.
 
-### 输出转换器
+### Output Converter
 
-反相器交流地通过直流工作点扫描得到：
+The inverter common-mode reference is obtained by DC operating-point analysis, with:
 
 ```text
 VAGND ≈ 0.747975 V
 ```
 
-输出以 `VAGND` 为参考，采用 `2 mV` 表示数字量 `1`：
+The output is measured relative to `VAGND`, with `2 mV` representing the digital value `1`:
 
 ```text
 y = (Vout - VAGND) / 2 mV
 ```
 
-输出由 `phi3` 在计算结果稳定阶段进行采样保持，以降低时钟切换带来的毛刺。
+The `phi3` clock samples and holds the output during the stable portion of the computation, reducing clock-switching glitches.
 
-### 权重控制与开关电容阵列
+### Weight Control and Switched-Capacitor Array
 
-- `ADC3` 对权重输入进行 3 位量化。
-- 三路二进制加权电容分别为 `10 fF、20 fF、40 fF`。
-- 等效电容由控制码决定，实现卷积核权重的动态配置。
-- 反馈电容最终取 `C3 = 92.4 fF`，用于调整输出电压比例。
+- `ADC3` quantizes the kernel input into a 3-bit code.
+- The binary-weighted capacitors are `10 fF`, `20 fF`, and `40 fF`.
+- The equivalent capacitance is selected by the control code, enabling programmable kernel weights.
+- The feedback capacitor is set to `C3 = 92.4 fF` to adjust the output voltage scale.
 
-例如，权重输入为 `3 V` 时，量化码为 `3`，接入 `10 fF` 和 `20 fF` 两个支路，得到 `30 fF` 的等效电容。
+For example, when the weight input is `3 V`, the quantization code is `3`. The `10 fF` and `20 fF` branches are enabled, producing an equivalent capacitance of `30 fF`.
 
-## 三相时钟
+## Three-Phase Clocking
 
-- `phi1`：前半周期导通，完成输入采样。
-- `phi2`：后半周期导通，完成电荷转移并建立计算结果。
-- `phi3`：在 `phi2` 的稳定阶段产生窄脉冲，完成输出采样保持。
+- `phi1`: active during the first half of the cycle for input sampling.
+- `phi2`: active during the second half of the cycle for charge transfer and result settling.
+- `phi3`: a narrow pulse during the stable portion of `phi2` for output sample-and-hold.
 
-| 参数 | 设置 |
+| Parameter | Setting |
 | --- | --- |
-| `phi1` / `phi2` 周期 | `10 ns` |
-| `phi1` 高电平区间 | `0 ~ 4 ns` |
-| `phi2` 高电平区间 | `5 ~ 9 ns` |
-| 两相时钟非重叠时间 | 约 `1 ns` |
-| `phi3` 延迟 / 脉宽 | `8 ns` / `0.5 ns` |
-| 时钟上升/下降时间 | `50 ps` |
+| `phi1` / `phi2` period | `10 ns` |
+| `phi1` high interval | `0 ~ 4 ns` |
+| `phi2` high interval | `5 ~ 9 ns` |
+| Non-overlap interval | Approximately `1 ns` |
+| `phi3` delay / pulse width | `8 ns` / `0.5 ns` |
+| Clock rise/fall time | `50 ps` |
 
-## 仿真结果
+## Simulation Results
 
-主要测试输入对应的理论输出和实际输出为：
+For the main test case, the theoretical and simulated outputs are:
 
 ```text
-理论输出：       8      13
-                23      28
+Theoretical output:      8       13
+                         23       28
 
-实际输出：     7.9975  12.9958
-              22.9914  27.9885
+Simulated output:      7.9975  12.9958
+                      22.9914  27.9885
 ```
 
-| 输出 | 精度 |
+| Output | Accuracy |
 | --- | ---: |
 | `y11` | 99.969% |
 | `y12` | 99.967% |
 | `y21` | 99.963% |
 | `y22` | 99.959% |
 
-仿真平均电源电流约为 `0.528 mA`，小于 `8 mA` 的要求。结果表明，该卷积器能够在一个 `10 ns` 时钟周期内完成计算，输出采样后波形稳定，精度满足设计指标。项目还对多组输入矩阵和卷积核进行了额外验证，输出结果与理论卷积结果一致。
+The average simulated supply current is approximately `0.528 mA`, below the `8 mA` requirement. The convolution unit completes its calculation within one `10 ns` clock cycle, and the sampled output waveform remains stable. Additional input matrices and kernels were also tested, with results consistent with the theoretical convolution values.
 
-## 仓库目录
+## Repository Structure
 
 ```text
 .
 ├── README.md
 └── lab/
     ├── cds.lib
-    ├── CNN_inv/          # 卷积核心
-    ├── CNN_inv_tb/       # 卷积核心测试平台
-    ├── inv_adder/        # 反相器乘加单元
-    ├── inv_adder_tb/     # 乘加单元测试平台
-    ├── ADC3/             # 3 位权重控制模块
-    ├── Ceff_ADC3/        # 等效电容控制模块
-    ├── Ceff_ADC3_tb/     # 等效电容测试平台
-    ├── input_converter/  # 输入转换器
-    └── output_converter/ # 输出采样转换器
+    ├── CNN_inv/          # Convolution core
+    ├── CNN_inv_tb/       # Convolution-core testbench
+    ├── inv_adder/        # Inverter-based multiply-accumulate unit
+    ├── inv_adder_tb/     # Multiply-accumulate testbench
+    ├── ADC3/             # 3-bit weight-control module
+    ├── Ceff_ADC3/        # Equivalent-capacitance control module
+    ├── Ceff_ADC3_tb/     # Equivalent-capacitance testbench
+    ├── input_converter/  # Input converter
+    └── output_converter/ # Sampled-output converter
 ```
 
-## 仿真环境
+## Simulation Environment
 
 - Cadence Virtuoso
 - Verilog-A
 - Analog Design Environment / Maestro
 
-本项目中的部分文件为 Cadence 工程数据库和仿真生成文件，建议在 Cadence Virtuoso 环境中打开 `lab/` 目录进行查看和仿真。
-
-## 作者
-
-詹学尚
-
-上海交通大学
+Some files in this repository are Cadence design databases and simulation-generated files. Open the `lab/` directory in Cadence Virtuoso to inspect and simulate the design.
