@@ -1,0 +1,577 @@
+<?xml version="1.0"?>
+<statedb ICVersion="IC6.1.7-64b.78" modifiedTime="06/09/2026 02:37:34" version="5">ExplorerRun.0
+	<Test Name="lab3:Ceff_ADC3_tb:1">
+		<component Name="adeInfo" Type="skillTable">adeinfo
+			<field Name="designInfo" Type="list">("lab3" "Ceff_ADC3_tb" "schematic" "spectre")</field>
+			<field Name="descriptiontext" Type="string">"None"</field>
+			<field Name="projectDir" Type="string">"/home/WXL/simulation/lab3/Ceff_ADC3_tb/maestro/results/maestro/.tmpADEDir_WXL/lab3:Ceff_ADC3_tb:1/simulation"</field>
+		</component>
+		<component Name="rfstim" Type="skillTable">rfstim</component>
+		<component Name="analyses" Type="skillTable">asiEnvSaveTable
+			<analyses Name="analysis">
+				<analysis Name="ac">
+					<partition Name="options">
+						<field Name="additionalParams" Type="string">""</field>
+						<field Name="annotate" Type="string">"status"</field>
+						<field Name="restart" Type="string">""</field>
+						<field Name="oppoint" Type="string">""</field>
+						<field Name="nestlvl" Type="string">""</field>
+						<field Name="save" Type="string">""</field>
+						<field Name="readforce" Type="string">""</field>
+						<field Name="skipdc" Type="string">""</field>
+						<field Name="force" Type="string">""</field>
+						<field Name="prevoppoint" Type="string">""</field>
+						<field Name="writefinal" Type="string">""</field>
+						<field Name="write" Type="string">""</field>
+						<field Name="readns" Type="string">""</field>
+					</partition>
+					<partition Name="fields">
+						<field Name="special" Type="string">"None"</field>
+						<field Name="perturbation" Type="string">"linear"</field>
+						<field Name="srcType" Type="string">"port"</field>
+						<field Name="rf1_src" Type="list">nil</field>
+						<field Name="rf1_freq" Type="string">""</field>
+						<field Name="rf2_src" Type="list">nil</field>
+						<field Name="rf2_freq" Type="string">""</field>
+						<field Name="rfmag" Type="string">""</field>
+						<field Name="rfmag2" Type="string">""</field>
+						<field Name="rfmag3" Type="string">""</field>
+						<field Name="rfdbm" Type="string">""</field>
+						<field Name="rfdbm2" Type="string">""</field>
+						<field Name="rfdbm3" Type="string">""</field>
+						<field Name="fim_out" Type="string">""</field>
+						<field Name="contriblist" Type="list">nil</field>
+						<field Name="flin_out" Type="string">""</field>
+						<field Name="maxharm_nonlin" Type="string">""</field>
+						<field Name="outType" Type="string">"Voltage"</field>
+						<field Name="out1" Type="string">""</field>
+						<field Name="out2" Type="string">""</field>
+						<field Name="enable" Type="list">(t)</field>
+						<field Name="sweep" Type="string">"Frequency"</field>
+						<field Name="freq" Type="string">""</field>
+						<field Name="dev" Type="string">""</field>
+						<field Name="deviceParam" Type="string">""</field>
+						<field Name="mod" Type="string">""</field>
+						<field Name="modelParam" Type="string">""</field>
+						<field Name="designVar" Type="string">""</field>
+						<field Name="param" Type="string">""</field>
+						<field Name="rangeType" Type="string">"Start-Stop"</field>
+						<field Name="sweepChange" Type="list">nil</field>
+						<field Name="start" Type="string">"100k"</field>
+						<field Name="stop" Type="string">"1M"</field>
+						<field Name="center" Type="string">""</field>
+						<field Name="span" Type="string">""</field>
+						<field Name="incrType" Type="string">"Logarithmic"</field>
+						<field Name="stepTypeLin" Type="string">"Step Size"</field>
+						<field Name="stepTypeLog" Type="string">"Number of Steps"</field>
+						<field Name="step" Type="string">""</field>
+						<field Name="lin" Type="string">""</field>
+						<field Name="dec" Type="string">""</field>
+						<field Name="log" Type="string">"100"</field>
+						<field Name="useDiscrete" Type="list">nil</field>
+						<field Name="values" Type="list">nil</field>
+					</partition>
+				</analysis>
+			</analyses>
+		</component>
+		<component Name="convergence" Type="skillTable">sigList
+			<partition Name="Signallist">
+				<field Name="nodeSets" Type="list">nil</field>
+				<field Name="forceNodes" Type="list">nil</field>
+				<field Name="initConds" Type="list">nil</field>
+			</partition>
+		</component>
+		<component Name="cosimOptions" Type="skillTable">asiEnvSaveTable
+			<partition Name="cosim">
+				<field Name="timeout" Type="fixnum">60</field>
+				<field Name="matlabStartDir" Type="string">""</field>
+				<field Name="inputs" Type="list">nil</field>
+				<field Name="matlabStartCmd" Type="string">"matlab"</field>
+				<field Name="port" Type="fixnum">38520</field>
+				<field Name="design" Type="string">""</field>
+				<field Name="serverr" Type="string">"localhost"</field>
+				<field Name="server" Type="string">""</field>
+				<field Name="whenStartMatlab" Type="string">"no"</field>
+				<field Name="outputs" Type="list">nil</field>
+				<field Name="enable" Type="list">nil</field>
+			</partition>
+		</component>
+		<component Name="devCheckingSetup" Type="skillTable">stateDpl
+			<field Name="stateDpl" Type="skillDpl">
+				<field Name="devCheckingEnabled" Type="string">"no"</field>
+				<field Name="asserts" Type="list">nil</field>
+				<field Name="inclusiveFilters" Type="list">nil</field>
+				<field Name="exclusiveFilters" Type="list">nil</field>
+				<field Name="options" Type="skillDpl">
+					<field Name="checklimit" Type="skillDpl">
+						<field Name="pzDisableAll" Type="list">nil</field>
+						<field Name="pzEnableAll" Type="list">nil</field>
+						<field Name="pzSeverity" Type="string">"None"</field>
+						<field Name="noiseDisableAll" Type="list">nil</field>
+						<field Name="noiseEnableAll" Type="list">nil</field>
+						<field Name="noiseSeverity" Type="string">"None"</field>
+						<field Name="spDisableAll" Type="list">nil</field>
+						<field Name="spEnableAll" Type="list">nil</field>
+						<field Name="spSeverity" Type="string">"None"</field>
+						<field Name="acDisableAll" Type="list">nil</field>
+						<field Name="acEnableAll" Type="list">nil</field>
+						<field Name="acSeverity" Type="string">"None"</field>
+						<field Name="dcOpDisableAll" Type="list">nil</field>
+						<field Name="dcOpEnableAll" Type="list">nil</field>
+						<field Name="dcOpSeverity" Type="string">"None"</field>
+						<field Name="dcDisableAll" Type="list">nil</field>
+						<field Name="dcEnableAll" Type="list">nil</field>
+						<field Name="dcSeverity" Type="string">"None"</field>
+						<field Name="tranDisableAll" Type="list">nil</field>
+						<field Name="tranEnableAll" Type="list">nil</field>
+						<field Name="tranSeverity" Type="string">"None"</field>
+						<field Name="tranStopTime" Type="list">nil</field>
+						<field Name="tranStartTime" Type="list">nil</field>
+					</field>
+				</field>
+			</field>
+		</component>
+		<component Name="environmentOptions" Type="skillTable">asiEnvSaveTable
+			<partition Name="envOpts">
+				<field Name="printComments" Type="list">(nil nil)</field>
+				<field Name="enableNoiseRefactor" Type="symbol">t</field>
+				<field Name="emAnaType" Type="string">"Dynamic"</field>
+				<field Name="userCmdLineOption" Type="string">""</field>
+				<field Name="restart" Type="string">""</field>
+				<field Name="lsusp" Type="list">nil</field>
+				<field Name="emirEnable_static" Type="list">nil</field>
+				<field Name="analysisOrder" Type="list">("pz" "dcmatch" "stb" "tran" "envlp" "ac" "dc" "lf" "noise" "xf" "sp" "pss" "pac" "pstb" "pnoise" "pxf" "psp" "qpss" "qpac" "qpnoise" "qpxf" "qpsp" "hb" "hbac" "hbnoise" "sens" "acmatch")</field>
+				<field Name="stopViewList" Type="list">("spectre")</field>
+				<field Name="savestate" Type="string">""</field>
+				<field Name="emTechFile" Type="string">""</field>
+				<field Name="enableArclength" Type="list">nil</field>
+				<field Name="pllPlugin" Type="string">""</field>
+				<field Name="pllWizardinfo" Type="string">""</field>
+				<field Name="emirSumList" Type="list">nil</field>
+				<field Name="vcoType" Type="string">""</field>
+				<field Name="switchViewList" Type="list">("spectre" "cmos_sch" "cmos.sch" "schematic" "veriloga")</field>
+				<field Name="macroModelEnable" Type="list">nil</field>
+				<field Name="emirEnable" Type="list">nil</field>
+				<field Name="enableDiagnose" Type="list">nil</field>
+				<field Name="paramRangeCheckFile" Type="string">""</field>
+				<field Name="macroModelList" Type="list">nil</field>
+				<field Name="sst2usecolon" Type="list">nil</field>
+				<field Name="firstRun" Type="symbol">t</field>
+				<field Name="autoDisplay" Type="symbol">t</field>
+				<field Name="setTopLevelAsSubckt" Type="list">nil</field>
+				<field Name="emLayerMap" Type="string">""</field>
+				<field Name="cpfIsVMSEnabled" Type="symbol">t</field>
+				<field Name="cmd64bit" Type="list">nil</field>
+			</partition>
+		</component>
+		<component Name="graphicalStimuli" Type="skillTable">graphicalStimTable
+			<field Name="GLOBALS" Type="skillDpl"></field>
+			<field Name="INPUTS" Type="skillDpl"></field>
+		</component>
+		<component Name="mdlOptions" Type="skillTable">asiEnvSaveTable
+			<partition Name="mdlOpts">
+				<field Name="mdlFrom" Type="string">"From File"</field>
+				<field Name="enable" Type="list">nil</field>
+				<field Name="additionals" Type="string">""</field>
+				<field Name="cellName" Type="string">""</field>
+				<field Name="formatType" Type="string">"Default"</field>
+				<field Name="libName" Type="string">""</field>
+				<field Name="mdlFile" Type="string">""</field>
+				<field Name="precFormat" Type="string">"%.15g"</field>
+				<field Name="viewName" Type="string">""</field>
+				<field Name="engFormat" Type="fixnum">6</field>
+			</partition>
+		</component>
+		<component Name="modelSetup" Type="skillTable">modelSetup
+			<field Name="modelFiles" Type="list">nil</field>
+		</component>
+		<component Name="opPoints" Type="skillTable">opPoints
+			<field Name="opPoints" Type="list">nil</field>
+		</component>
+		<component Name="otherInfo" Type="skillTable">otherInfo
+			<field Name="mtsMode" Type="list">nil</field>
+		</component>
+		<component Name="outputs" Type="skillTable">outputs
+			<partition Name="outputsCommon">
+				<partition Name="envSaveOptions">
+					<field Name="extremesInfo" Type="list">nil</field>
+					<field Name="saveFrame" Type="string">""</field>
+					<field Name="save" Type="string">"allpub"</field>
+					<field Name="pwr" Type="string">""</field>
+					<field Name="nestlvl" Type="string">""</field>
+					<field Name="currents" Type="string">""</field>
+					<field Name="subcktprobelvl" Type="string">""</field>
+					<field Name="useprobes" Type="string">""</field>
+					<field Name="saveahdlvars" Type="string">""</field>
+					<field Name="infoFrame" Type="string">""</field>
+					<field Name="infoOptions" Type="list">(("modelParameter" "models" "rawfile" "" "" "" t) ("element" "inst" "rawfile" "" "" "" t) ("outputParameter" "output" "rawfile" "" "" "" t) ("designParamVals" "parameters" "rawfile" "" "" "" t) ("primitives" "primitives" "rawfile" "" "" "" t) ("subckts" "subckts" "rawfile" "" "" "" t) ("asserts" "assert" "rawfile" "" "" "" nil) ("extremeinfo" "all" "logfile" "" "yes" "" nil) ("&lt;Click_To_Add&gt;" "none" "rawfile" "" "" "" nil))</field>
+					<field Name="captab_detail" Type="string">"node"</field>
+					<field Name="captab_sort" Type="string">"name"</field>
+					<field Name="captab_threshold" Type="string">""</field>
+					<field Name="outputFrame" Type="string">""</field>
+					<field Name="simOutputFormat" Type="string">"psfxl"</field>
+					<field Name="fastViewOption" Type="list">nil</field>
+					<field Name="marchingSupportOption" Type="list">nil</field>
+					<field Name="modelParamInfo" Type="symbol">t</field>
+					<field Name="elementInfo" Type="symbol">t</field>
+					<field Name="outputParamInfo" Type="symbol">t</field>
+					<field Name="primitivesInfo" Type="symbol">t</field>
+					<field Name="subcktsInfo" Type="symbol">t</field>
+					<field Name="designParamValInfo" Type="symbol">t</field>
+					<field Name="assertsInfo" Type="list">nil</field>
+				</partition>
+				<field Name="outputList" Type="skillList">
+					<field Name="outputList_0" Type="defstruct">sevOutputStruct
+						<field Name="name" Type="list">nil</field>
+						<field Name="expression" Type="list">nil</field>
+						<field Name="signal" Type="string">"/I4/Port_out"</field>
+						<field Name="scriptFile" Type="list">nil</field>
+						<field Name="type2" Type="list">nil</field>
+						<field Name="evalType" Type="list">nil</field>
+						<field Name="displayIt" Type="list">nil</field>
+						<field Name="internalName" Type="list">nil</field>
+						<field Name="masterName" Type="list">nil</field>
+						<field Name="masterScriptFile" Type="list">nil</field>
+						<field Name="saveScriptFile" Type="list">nil</field>
+						<field Name="saveMasterScriptFile" Type="list">nil</field>
+						<field Name="isReferenced" Type="list">nil</field>
+						<field Name="lastEvalTime" Type="list">nil</field>
+						<field Name="origin" Type="list">nil</field>
+						<field Name="sweepSet" Type="list">nil</field>
+						<field Name="depList" Type="list">nil</field>
+						<field Name="type" Type="symbol">terminal</field>
+						<field Name="areaTable" Type="list">nil</field>
+						<field Name="selectionDetail" Type="list">((color ("y2" "drawing")))</field>
+						<field Name="value" Type="list">nil</field>
+						<field Name="plot" Type="symbol">t</field>
+						<field Name="save" Type="symbol">t</field>
+						<field Name="march" Type="list">nil</field>
+						<field Name="index" Type="fixnum">1</field>
+						<field Name="timeStamp" Type="list">nil</field>
+						<field Name="graphType" Type="list">nil</field>
+						<field Name="yaxisLabel" Type="list">nil</field>
+						<field Name="label" Type="list">nil</field>
+						<field Name="yaxisUnit" Type="list">nil</field>
+						<field Name="sqlStatement" Type="list">nil</field>
+						<field Name="inLastSet" Type="list">nil</field>
+					</field>
+				</field>
+			</partition>
+			<partition Name="outputsScripts">
+				<field Name="outputList" Type="list">nil</field>
+			</partition>
+			<partition Name="outputsAreaGoal">
+				<field Name="areaGoal" Type="list">nil</field>
+			</partition>
+			<partition Name="outputsOpRegion">
+				<field Name="opRegion" Type="list">nil</field>
+			</partition>
+		</component>
+		<component Name="paramSetup" Type="skillTable">expr</component>
+		<component Name="relxOptions" Type="skillTable">asiEnvSaveTable
+			<partition Name="relxOpts">
+				<field Name="mosDevDegVdconstwl" Type="string">""</field>
+				<field Name="gaAlterParam" Type="string">""</field>
+				<field Name="enableDegSort" Type="list">nil</field>
+				<field Name="mosHciOpMethod" Type="string">"calculate"</field>
+				<field Name="mosDevDegIdconstwl" Type="string">""</field>
+				<field Name="mosDevDegVsconst" Type="string">""</field>
+				<field Name="stressAnalysis" Type="string">"tran"</field>
+				<field Name="mosHciIgateMethod" Type="string">"calculate"</field>
+				<field Name="degdatatype" Type="string">"appendage"</field>
+				<field Name="mosHciIdMethod" Type="string">"ids"</field>
+				<field Name="mosDevDegIdconst" Type="string">""</field>
+				<field Name="mosHciAccuracy" Type="string">"liberal (1)"</field>
+				<field Name="mosDevDegVdconst" Type="string">""</field>
+				<field Name="mosDevDegVbconst_n" Type="string">""</field>
+				<field Name="relxTranStart" Type="string">""</field>
+				<field Name="relxTranStop" Type="string">""</field>
+				<field Name="mosHciLifeTimeMethod" Type="string">"calculate"</field>
+				<field Name="mosDevDegVsconstModels" Type="string">""</field>
+				<field Name="mosMaskDevInstance" Type="string">""</field>
+				<field Name="mosMaskDev" Type="list">nil</field>
+				<field Name="enableRelXTran" Type="list">nil</field>
+				<field Name="gaSkipFresh" Type="list">nil</field>
+				<field Name="mosHciLifeTimeMethodTable" Type="string">""</field>
+				<field Name="gaAlterTime" Type="string">""</field>
+				<field Name="anaMode" Type="string">"Reliability"</field>
+				<field Name="gaAlterValue" Type="string">""</field>
+				<field Name="mosDevDegVgstep" Type="string">""</field>
+				<field Name="mosMinAge" Type="string">""</field>
+				<field Name="mosDevDegVgstepModels" Type="string">""</field>
+				<field Name="agingAnalysis" Type="string">"tran"</field>
+				<field Name="gaAlterParamListBox" Type="skillDpl">
+					<field Name="choices" Type="list">nil</field>
+					<field Name="value" Type="list">nil</field>
+				</field>
+				<field Name="gaSaveResults" Type="string">"all"</field>
+				<field Name="gaAlterHeadListBox" Type="skillDpl">
+					<field Name="choices" Type="list">("#     Time           Param               Value")</field>
+					<field Name="value" Type="list">nil</field>
+				</field>
+				<field Name="relxAnalysisType" Type="string">"tran"</field>
+				<field Name="nativeMode" Type="string">"Spectre native"</field>
+				<field Name="mosDevDegVdsatModels" Type="string">""</field>
+				<field Name="gaAgeStepTotalStep" Type="string">""</field>
+				<field Name="reportModelParamChanged" Type="list">nil</field>
+				<field Name="compactagednetlist" Type="string">"none"</field>
+				<field Name="mosMode" Type="list">(t t t)</field>
+				<field Name="gaSaveSome" Type="string">""</field>
+				<field Name="enabledegdata" Type="list">nil</field>
+				<field Name="showunageddevices" Type="string">"limit"</field>
+				<field Name="otherRXOptions" Type="string">""</field>
+				<field Name="mosDevDegNeedSimulator" Type="list">nil</field>
+				<field Name="mosDevDegSimulatorPath" Type="string">""</field>
+				<field Name="relusercmdlineoption" Type="string">""</field>
+				<field Name="mosDevDegVdlinModels" Type="string">""</field>
+				<field Name="checknegagingclamp" Type="string">"no"</field>
+				<field Name="mosDevDegVdlin" Type="string">""</field>
+				<field Name="checknegagingtype" Type="string">"error"</field>
+				<field Name="mosDevDegVglinModels" Type="string">""</field>
+				<field Name="mosAgeModelLimit" Type="list">nil</field>
+				<field Name="tmiAgingType" Type="string">"TMI Aging"</field>
+				<field Name="mosDevDegVgsweep_end_p" Type="string">""</field>
+				<field Name="enableStress" Type="list">nil</field>
+				<field Name="mosDevDegVthConstCurrSp" Type="list">nil</field>
+				<field Name="outputmethod" Type="string">"single"</field>
+				<field Name="mosDevDegVgsat" Type="string">""</field>
+				<field Name="gaAgePoints" Type="string">""</field>
+				<field Name="mosDevDegVgsweep_end_pModels" Type="string">""</field>
+				<field Name="uriAppendtype" Type="string">"none"</field>
+				<field Name="fresh_data_dir" Type="string">""</field>
+				<field Name="gaMode" Type="string">"agepoint"</field>
+				<field Name="mosModifyNetlist" Type="list">nil</field>
+				<field Name="mosDevDegVgsweep_end_n" Type="string">""</field>
+				<field Name="uriMode" Type="string">"none"</field>
+				<field Name="gaAgePointsUnit" Type="string">"Years"</field>
+				<field Name="mosEnableOutputDevDeg" Type="list">nil</field>
+				<field Name="mindtemp" Type="string">""</field>
+				<field Name="mosDevDegVdd" Type="string">""</field>
+				<field Name="stress_data_dir" Type="string">""</field>
+				<field Name="combinedeg" Type="string">"off"</field>
+				<field Name="gaAgeStepStop" Type="string">""</field>
+				<field Name="aged_data_dir" Type="string">""</field>
+				<field Name="stress_var_list" Type="list">nil</field>
+				<field Name="mosDevDegVgsatModels" Type="string">""</field>
+				<field Name="mosVthMethod" Type="string">"calculate"</field>
+				<field Name="enableAging" Type="list">nil</field>
+				<field Name="gaPassParam" Type="string">"no"</field>
+				<field Name="mosDevDegVglin" Type="string">""</field>
+				<field Name="gaAgeStepStart" Type="string">""</field>
+				<field Name="enableRelxpert" Type="list">nil</field>
+				<field Name="enableGradualAging" Type="list">nil</field>
+				<field Name="mosDevDegModels" Type="string">""</field>
+				<field Name="gaAgeStepType" Type="string">"lin"</field>
+				<field Name="mosDevDegVthUseId" Type="list">nil</field>
+				<field Name="mosAgeModelLimitType" Type="string">"age"</field>
+				<field Name="mosDevDegVddSetting" Type="list">nil</field>
+				<field Name="gaAgeStepUnit" Type="string">"Years"</field>
+				<field Name="mosDevDegVdsat" Type="string">""</field>
+				<field Name="gaIterationNum" Type="string">""</field>
+				<field Name="mosDevDegVthUseIs" Type="list">nil</field>
+				<field Name="mosAgeModelLimitNum" Type="string">"10"</field>
+				<field Name="gaSkipLast" Type="list">nil</field>
+				<field Name="presetValue" Type="string">""</field>
+				<field Name="doADELPostProcess" Type="symbol">t</field>
+				<field Name="mosDevDegVgsweep_start_n" Type="string">""</field>
+				<field Name="mosAgeDomain" Type="string">"loglog"</field>
+				<field Name="mosDevDegVbconst_pModels" Type="string">""</field>
+				<field Name="presetType" Type="string">"lifetime"</field>
+				<field Name="gaInputStressDir" Type="string">""</field>
+				<field Name="mosAgeMethod" Type="string">"agemos"</field>
+				<field Name="mosMaskDevInclude" Type="string">"include"</field>
+				<field Name="relxpertExecName" Type="string">"relxpert"</field>
+				<field Name="includeFiles" Type="string">""</field>
+				<field Name="mosAgingTime" Type="string">"10"</field>
+				<field Name="mosDevDegVbconst_nModels" Type="string">""</field>
+				<field Name="enablePreset" Type="list">nil</field>
+				<field Name="mosDevDegVbconst_p" Type="string">""</field>
+				<field Name="tmiMosMode" Type="list">(t t)</field>
+				<field Name="mosAgeModelFilePath" Type="string">""</field>
+				<field Name="enableSelfheating" Type="list">nil</field>
+				<field Name="mosDevDegVgsweep_start_nModels" Type="string">""</field>
+				<field Name="mosAppendDeviceAge" Type="list">nil</field>
+				<field Name="aged_var_list" Type="list">nil</field>
+				<field Name="enableAgingForTMI" Type="symbol">t</field>
+				<field Name="uriLibs" Type="string">""</field>
+				<field Name="simModeType" Type="string">"all"</field>
+				<field Name="mosDevDegVgsweep_end_nModels" Type="string">""</field>
+				<field Name="uriDebugMode" Type="string">"0"</field>
+				<field Name="presetBlock" Type="string">""</field>
+				<field Name="mosEffectiveModel" Type="symbol">t</field>
+				<field Name="mosAgingTimeUnit" Type="string">"Years"</field>
+				<field Name="mosDeltad" Type="string">"0.1"</field>
+				<field Name="mosDevDegVgsweep_start_p" Type="string">""</field>
+				<field Name="mosCompactAgeModel" Type="list">nil</field>
+				<field Name="simModeFile" Type="string">"input.bs0"</field>
+				<field Name="mosDevDegVgsweep_start_pModels" Type="string">""</field>
+				<field Name="mosDumpAgeModel" Type="list">nil</field>
+				<field Name="presetAgeLevel" Type="string">""</field>
+				<field Name="mosCalcLifetime" Type="list">nil</field>
+			</partition>
+		</component>
+		<component Name="simulationFiles" Type="skillTable">_simulationFiles
+			<field Name="VectorFile" Type="list">nil</field>
+			<field Name="allPspiceFiles" Type="list">nil</field>
+			<field Name="allIncludedPaths" Type="list">nil</field>
+			<field Name="EVcdFile" Type="string">""</field>
+			<field Name="allSpefFiles" Type="list">nil</field>
+			<field Name="dspfFile" Type="list">nil</field>
+			<field Name="hlcheck" Type="string">"off"</field>
+			<field Name="allDefinitionFiles" Type="list">nil</field>
+			<field Name="definitionFiles" Type="list">nil</field>
+			<field Name="pspiceFile" Type="list">nil</field>
+			<field Name="allDspfFiles" Type="list">nil</field>
+			<field Name="allStimulusFiles" Type="list">nil</field>
+			<field Name="includePath" Type="string">""</field>
+			<field Name="VcdInfoFile" Type="string">""</field>
+			<field Name="EVcdInfoFile" Type="string">""</field>
+			<field Name="stimulusFile" Type="list">nil</field>
+			<field Name="spefFile" Type="list">nil</field>
+			<field Name="allVectorFiles" Type="list">nil</field>
+			<field Name="VcdFile" Type="string">""</field>
+		</component>
+		<component Name="simulatorOptions" Type="skillTable">asiEnvSaveTable
+			<partition Name="opts">
+				<field Name="macromodels" Type="string">""</field>
+				<field Name="nportcompress" Type="string">""</field>
+				<field Name="pivotdc" Type="string">""</field>
+				<field Name="approx" Type="string">""</field>
+				<field Name="sensformat" Type="string">""</field>
+				<field Name="ahdllint" Type="string">""</field>
+				<field Name="notation" Type="string">""</field>
+				<field Name="maxwarns" Type="string">"5"</field>
+				<field Name="colslog" Type="string">""</field>
+				<field Name="title" Type="string">""</field>
+				<field Name="pivrel" Type="string">"1e-3"</field>
+				<field Name="nportirfiledir" Type="string">""</field>
+				<field Name="additionalArgs" Type="string">""</field>
+				<field Name="maxrsd" Type="string">""</field>
+				<field Name="sensbinparam" Type="string">""</field>
+				<field Name="ivth_vdsmin" Type="string">""</field>
+				<field Name="pivabs" Type="string">""</field>
+				<field Name="redefinedparams" Type="string">""</field>
+				<field Name="error" Type="string">""</field>
+				<field Name="ahdllint_maxwarn" Type="string">""</field>
+				<field Name="sensfile" Type="string">"../psf/sens.output"</field>
+				<field Name="senstype" Type="string">""</field>
+				<field Name="scalefactor" Type="string">""</field>
+				<field Name="limit" Type="string">""</field>
+				<field Name="ahdllint_on" Type="string">""</field>
+				<field Name="tnom" Type="string">"27"</field>
+				<field Name="dochecklimit" Type="string">""</field>
+				<field Name="audit" Type="string">""</field>
+				<field Name="gmethod" Type="string">""</field>
+				<field Name="rebuild_matrix" Type="string">""</field>
+				<field Name="iabstol" Type="string">"1e-12"</field>
+				<field Name="scale" Type="string">"1.0"</field>
+				<field Name="nportunusedportrmin" Type="string">""</field>
+				<field Name="simstat" Type="string">""</field>
+				<field Name="dc_pivot_check" Type="string">""</field>
+				<field Name="temp" Type="string">"27"</field>
+				<field Name="note" Type="string">""</field>
+				<field Name="inventory" Type="string">""</field>
+				<field Name="flow" Type="string">""</field>
+				<field Name="generalnoiseinstonoff" Type="string">""</field>
+				<field Name="value1" Type="string">""</field>
+				<field Name="warn" Type="string">""</field>
+				<field Name="dptran_gmethod" Type="string">""</field>
+				<field Name="homotopy" Type="string">""</field>
+				<field Name="vthmod" Type="string">""</field>
+				<field Name="narrate" Type="string">""</field>
+				<field Name="printstep" Type="string">""</field>
+				<field Name="info" Type="string">""</field>
+				<field Name="residualtol" Type="string">""</field>
+				<field Name="tempeffects" Type="string">""</field>
+				<field Name="rthresh" Type="string">""</field>
+				<field Name="digits" Type="string">"5"</field>
+				<field Name="checklimitfile" Type="string">""</field>
+				<field Name="cols" Type="string">"80"</field>
+				<field Name="maxnotes" Type="string">"5"</field>
+				<field Name="diagnose" Type="string">""</field>
+				<field Name="debug" Type="string">""</field>
+				<field Name="auto_minductor" Type="string">""</field>
+				<field Name="nportirreuse" Type="string">""</field>
+				<field Name="try_fast_op" Type="string">""</field>
+				<field Name="ivthw" Type="string">""</field>
+				<field Name="ignshorts" Type="string">""</field>
+				<field Name="iccapcheck" Type="string">""</field>
+				<field Name="rabsshort" Type="string">""</field>
+				<field Name="topcheck" Type="string">""</field>
+				<field Name="generalnoiseinst" Type="list">nil</field>
+				<field Name="checklimitskipfile" Type="string">""</field>
+				<field Name="vabstol" Type="string">"1e-6"</field>
+				<field Name="ivthl" Type="string">""</field>
+				<field Name="icpriority" Type="string">""</field>
+				<field Name="gmindc" Type="string">""</field>
+				<field Name="opptcheck" Type="string">""</field>
+				<field Name="preorder" Type="string">""</field>
+				<field Name="convdbg" Type="string">""</field>
+				<field Name="reltol" Type="string">"1e-3"</field>
+				<field Name="ivthp" Type="string">""</field>
+				<field Name="maxnotestologfile" Type="string">""</field>
+				<field Name="checklimitdest" Type="string">"psf"</field>
+				<field Name="gmin_check" Type="string">""</field>
+				<field Name="maxwarnstologfile" Type="string">""</field>
+				<field Name="sensfileonly" Type="string">""</field>
+				<field Name="scalem" Type="string">"1.0"</field>
+				<field Name="gmin" Type="string">"1e-12"</field>
+				<field Name="nportunusedportgmin" Type="string">""</field>
+				<field Name="tmevthmod" Type="string">""</field>
+				<field Name="nthreads" Type="string">""</field>
+				<field Name="nonconv_topnum" Type="string">""</field>
+				<field Name="rabsclamp" Type="string">""</field>
+				<field Name="quantities" Type="string">""</field>
+				<field Name="minr" Type="string">""</field>
+				<field Name="checklimitskipsubs" Type="string">""</field>
+				<field Name="ivthn" Type="string">""</field>
+				<field Name="multithread" Type="string">""</field>
+				<field Name="rforce" Type="string">"1"</field>
+				<field Name="nportcompressfiledir" Type="string">""</field>
+			</partition>
+		</component>
+		<component Name="subckts" Type="skillTable">subckt
+			<field Name="subcktKeepList" Type="list">nil</field>
+		</component>
+		<component Name="turboOptions" Type="skillTable">asiEnvSaveTable
+			<partition Name="turboOpts">
+				<field Name="analogSubcktValue" Type="list">nil</field>
+				<field Name="psrFmax" Type="string">""</field>
+				<field Name="digitalInstValue" Type="list">nil</field>
+				<field Name="errorLevel" Type="string">"Do not override"</field>
+				<field Name="virtualPowerNodes" Type="list">nil</field>
+				<field Name="uniMode" Type="string">"Spectre"</field>
+				<field Name="cktpreset" Type="string">"None"</field>
+				<field Name="numThreads" Type="string">""</field>
+				<field Name="analogInstValue" Type="list">nil</field>
+				<field Name="virtualPowerNodeValue" Type="list">nil</field>
+				<field Name="virtualPowerNodeListBox" Type="skillDpl">
+					<field Name="choices" Type="list">nil</field>
+					<field Name="value" Type="list">nil</field>
+				</field>
+				<field Name="virtualGroundNodes" Type="list">nil</field>
+				<field Name="envSwitch" Type="list">nil</field>
+				<field Name="apsplus" Type="list">nil</field>
+				<field Name="psrSwitch" Type="list">nil</field>
+				<field Name="psrOption" Type="string">"Default"</field>
+				<field Name="preserveOption" Type="string">"None"</field>
+				<field Name="proc_affinity" Type="string">""</field>
+				<field Name="dcOPSolver" Type="string">"APS"</field>
+				<field Name="mtOption" Type="string">"Auto"</field>
+				<field Name="digitalspeed" Type="string">"2"</field>
+				<field Name="optvdd" Type="flonum">3.3</field>
+				<field Name="digitalSubcktValue" Type="list">nil</field>
+				<field Name="preserveInst" Type="list">nil</field>
+			</partition>
+		</component>
+		<component Name="variables" Type="skillTable">variableTable
+			<field Name="saveComponent" Type="skillList">
+				<field Name="saveComponent_0" Type="defstruct">sevVariableStruct
+					<field Name="name" Type="string">"Vin"</field>
+					<field Name="expression" Type="string">"4"</field>
+					<field Name="index" Type="fixnum">1</field>
+				</field>
+			</field>
+		</component>
+	</Test>
+</statedb>

@@ -1,0 +1,52 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module ADC3_ctrl(Vin, Dout1, Dout2, Dout3);
+    input Vin;
+    output Dout1, Dout2, Dout3;
+
+    electrical Vin;
+    electrical Dout1, Dout2, Dout3;
+
+    parameter real vzero = 0.0;
+    parameter real vlsb  = 1.0 from (0:inf);
+    parameter real vhigh = 1.8;
+    parameter real td    = 0.0;
+    parameter real trise = 50e-12 from [0:inf);
+    parameter real tfall = 50e-12 from [0:inf);
+
+    integer code;
+    integer b0;
+    integer b1;
+    integer b2;
+    real q;
+
+    analog begin
+        q = (V(Vin) - vzero) / vlsb;
+
+        if (q < 0.5)
+            code = 0;
+        else if (q < 1.5)
+            code = 1;
+        else if (q < 2.5)
+            code = 2;
+        else if (q < 3.5)
+            code = 3;
+        else if (q < 4.5)
+            code = 4;
+        else if (q < 5.5)
+            code = 5;
+        else if (q < 6.5)
+            code = 6;
+        else
+            code = 7;
+
+        b0 = code % 2;
+        b1 = (code / 2) % 2;
+        b2 = (code / 4) % 2;
+
+        V(Dout1) <+ transition(b0 ? vhigh : 0.0, td, trise, tfall);
+        V(Dout2) <+ transition(b1 ? vhigh : 0.0, td, trise, tfall);
+        V(Dout3) <+ transition(b2 ? vhigh : 0.0, td, trise, tfall);
+    end
+endmodule

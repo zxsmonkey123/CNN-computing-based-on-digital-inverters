@@ -1,0 +1,196 @@
+*Info*    Exporting services from client ... 
+
+*Info*    Client has finished starting ... 
+
+
+
+*Info*    Configuring the session ...
+
+	Library      = lab3
+	Cell         = inv_adder
+	View         = schematic
+	Simulator    = spectre
+	State Path   = $AXL_SETUPDB_DIR/test_states
+	State Name   = ExplorerRun.0
+	Results DB   = /data/Project/study/lab3/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0.rdb
+	Results Dir  = /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0/1/lab3:inv_adder:1
+	Results Loc  = /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro
+	Project Dir  = /home/WXL/simulation
+	Setup DB loc = /data/Project/study/lab3/lab3/inv_adder/maestro
+	File Encoding = 0
+
+
+*Info*    Spectre controlMode is set "batch".
+
+
+
+
+
+
+*Info*    Run start for Point ID (0 1) on testbench [
+          lab3:inv_adder:1 ].
+
+Resetting statistical vars
+
+*Info*    Setting parameter values ...
+
+Setting var C1 = "10f"
+Setting var C2 = "10f"
+Setting var C3 = "100f"
+Setting temp(T) = 27
+Setting var vin1a = "20m"
+Setting var vin1b = "2"
+Setting var vin2a = "40m"
+Setting var vin2b = "3"
+
+*Info*    Netlist Directory =
+          /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0/1/lab3:inv_adder:1/netlist
+
+
+*Info*    Data Directory    =
+          /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0/1/lab3:inv_adder:1
+
+
+*Info*    Creating Netlist for Point ID (0 1)
+
+generate netlist...
+Loading seCore.cxt 
+Initializing the control file using cp:
+    cp /opt/Cadence/IC617/tools.lnx86/dfII/etc/si/control.spectre /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0/1/lab3:inv_adder:1/netlist/control
+Copying Spectre source file 'spectre.inp'
+Copying Spectre command file 'spectre.sim'
+Begin Incremental Netlisting Jun  4 11:50:07 2026
+End netlisting Jun  4 11:50:07 2026
+Loading monte.cxt 
+
+Netlisting Statistics:
+	Number of components:   15
+
+	Elapsed time:          0.0s
+Errors: 0	Warnings: 0
+      ...successful.
+compose simulator input file...
+      ...successful.
+
+*Info*    Running simulation on testbench [ lab3:inv_adder:1 ] for
+          Point ID (0 1).
+
+Delete psf data in /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0/1/lab3:inv_adder:1/psf.
+compose simulator input file...
+      ...successful.
+start simulator if needed...
+      ...successful.
+simulate...
+To view the simulator output, right-click on the test name, result 
+name, or any value in the "Results" tab of the Outputs section and 
+choose "Output Log" menu option.
+INFO (ADE-3067): Errors encountered during simulation. For more information, right-click
+        on a test name in the 'Results' tab of the Outputs pane and choose 'Output Log'
+        to view the simulation run log.
+
+*Error*   Error ID  = 5011
+*Error*   Error Msg = Simulator failed to complete the simulation.
+
+          Error found by spectre during circuit read-in.
+Error found
+          by spectre during circuit read-in.
+ERROR (SFE-23):
+          "input.scs" 13: The instance `M1' is referencing an
+          undefined model or subcircuit, `nmos4'. Either include the
+          file containing the def
+inition of `nmos4', or define
+          `nmos4' before running the simulation.
+ERROR (SFE-23):
+          "input.scs" 29: The instance `M0' is referencing an
+          undefined model or subcircuit, `pmos4'. Either include the
+          file containing the def
+inition of `pmos4', or define
+          `pmos4' before running the simulation.
+
+
+
+
+
+
+
+
+
+
+*Info*    Run start for Point ID (0 1) on testbench [
+          lab3:inv_adder:1 ].
+
+Resetting statistical vars
+
+*Info*    Setting parameter values ...
+
+Setting var C1 = "10f"
+Setting var C2 = "10f"
+Setting var C3 = "100f"
+Setting temp(T) = 27
+Setting var vin1a = "20m"
+Setting var vin1b = "2"
+Setting var vin2a = "40m"
+Setting var vin2b = "3"
+
+*Info*    Netlist Directory =
+          /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0/1/lab3:inv_adder:1/netlist
+
+
+*Info*    Data Directory    =
+          /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0/1/lab3:inv_adder:1
+
+
+*Info*    Creating Netlist for Point ID (0 1)
+
+generate netlist...
+Begin Incremental Netlisting Jun  4 11:50:08 2026
+End netlisting Jun  4 11:50:08 2026
+
+	The netlist is up to date.
+	Time taken to compare the design with netlist:   0.0s
+      ...successful.
+compose simulator input file...
+      ...successful.
+
+*Info*    Running simulation on testbench [ lab3:inv_adder:1 ] for
+          Point ID (0 1).
+
+Delete psf data in /home/WXL/simulation/lab3/inv_adder/maestro/results/maestro/ExplorerRun.0/1/lab3:inv_adder:1/psf.
+compose simulator input file...
+      ...successful.
+start simulator if needed...
+      ...successful.
+simulate...
+To view the simulator output, right-click on the test name, result 
+name, or any value in the "Results" tab of the Outputs section and 
+choose "Output Log" menu option.
+INFO (ADE-3067): Errors encountered during simulation. For more information, right-click
+        on a test name in the 'Results' tab of the Outputs pane and choose 'Output Log'
+        to view the simulation run log.
+
+*Error*   Error ID  = 5011
+*Error*   Error Msg = Simulator failed to complete the simulation.
+
+          Error found by spectre during circuit read-in.
+Error found
+          by spectre during circuit read-in.
+ERROR (SFE-23):
+          "input.scs" 13: The instance `M1' is referencing an
+          undefined model or subcircuit, `nmos4'. Either include the
+          file containing the def
+inition of `nmos4', or define
+          `nmos4' before running the simulation.
+ERROR (SFE-23):
+          "input.scs" 29: The instance `M0' is referencing an
+          undefined model or subcircuit, `pmos4'. Either include the
+          file containing the def
+inition of `pmos4', or define
+          `pmos4' before running the simulation.
+
+
+
+
+
+Simulation design variables differ from those on the cellView,
+they have been saved in the file "/tmp/saved-design-variables".
+To save future changes, copy variables to cellView before exiting.

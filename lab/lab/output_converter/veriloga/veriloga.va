@@ -1,0 +1,47 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module vout_to_y_2x2_sampled(
+    vout_11, vout_12, vout_21, vout_22,
+    phi_s,
+    y11, y12, y21, y22
+);
+
+input vout_11, vout_12, vout_21, vout_22;
+input phi_s;
+output y11, y12, y21, y22;
+
+electrical vout_11, vout_12, vout_21, vout_22;
+electrical phi_s;
+electrical y11, y12, y21, y22;
+
+parameter real vagnd = 0.747975448392;
+parameter real vlsb  = 2e-3;     // vout  2mV  +1
+parameter real y_lsb = 1.0;      // y=8V  8
+parameter real vth   = 0.9;      // phi_s 
+parameter real tr    = 50e-12;
+
+real y11_hold, y12_hold, y21_hold, y22_hold;
+
+analog begin
+    @(initial_step) begin
+        y11_hold = 0;
+        y12_hold = 0;
+        y21_hold = 0;
+        y22_hold = 0;
+    end
+
+    @(cross(V(phi_s) - vth, +1)) begin
+        y11_hold = ((V(vout_11) - vagnd) / vlsb) * y_lsb;
+        y12_hold = ((V(vout_12) - vagnd) / vlsb) * y_lsb;
+        y21_hold = ((V(vout_21) - vagnd) / vlsb) * y_lsb;
+        y22_hold = ((V(vout_22) - vagnd) / vlsb) * y_lsb;
+    end
+
+    V(y11) <+ transition(y11_hold, 0, tr, tr);
+    V(y12) <+ transition(y12_hold, 0, tr, tr);
+    V(y21) <+ transition(y21_hold, 0, tr, tr);
+    V(y22) <+ transition(y22_hold, 0, tr, tr);
+end
+
+endmodule

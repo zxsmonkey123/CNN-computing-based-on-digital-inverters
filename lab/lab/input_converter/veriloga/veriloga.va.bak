@@ -1,0 +1,9 @@
+// VerilogA for lab3, input_converter, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module input_converter;
+
+
+endmodule

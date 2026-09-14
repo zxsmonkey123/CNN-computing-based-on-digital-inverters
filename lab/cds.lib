@@ -1,0 +1,3 @@
+SOFTINCLUDE /opt/Cadence/IC617/share/cdssetup/cds.lib
+#Removed by ddDeleteObj: DEFINE lab3 /data/Project/study/lab3/lab3
+DEFINE lab3 /data/Project/study/lab3/lab3

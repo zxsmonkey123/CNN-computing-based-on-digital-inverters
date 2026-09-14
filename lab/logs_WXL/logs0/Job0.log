@@ -1,0 +1,90 @@
+\# Program start time UTC 2026.06.04 03:40:46.737
+\# Local time Thursday 4 June 2026, 11:40 am
+\o Program:		@(#)$CDS: virtuoso version 6.1.7-64b 11/09/2015 12:45 (sjfnl165) $
+\o Hierarchy:		/opt/Cadence/IC617/tools.lnx86/dfII/
+\o Sub version:		sub-version  IC6.1.7-64b.78  (64-bit addresses)
+\# Command line:	/opt/Cadence/IC617/tools.lnx86/dfII/bin/64bit/virtuoso -noautostart -mpssession virtuoso109504 -mpshost wxl-pc -davinciService DaVinciService_109504_1780544434 -log /data/Project/study/lab3/logs_WXL/logs0/Job0.log -licenseLockFileName /data/Project/study/lab3/.tmp_WXL/.wxl-pc_109504 -nograph -nostdin -axlChildIdFlag 0
+\# Host name (type):	wxl-pc (x86_64)
+\# Operating system:	Linux 3.10.0-327.36.3.el7.x86_64 #1 SMP Mon Oct 24 16:09:20 UTC 2016
+\# Linux /etc/issue:	\S
+\# Linux /etc/issue:	Kernel \r on an \m
+\# X display name (WxH):	wxl-pc:81 (1024x868)
+\# Available geometry:			TL(0:0) BR(1023:867)
+\# X server:			RealVNC Ltd (VNC nograph server, PID 114834)
+\# Depth of Visual (Root):	16 (16)
+\# Number of Planes Used:	16
+\# X version:		11.0 (vendor release 3370)
+\# X resource pool:	base 0x800000, mask 0x3fffff (4194303), shift 0
+\# 			current id 0x0, current max 0x3ffffa (4194298)
+\# Max data seg size:	     unlimited
+\# Max process size:	     unlimited
+\# Initial sbrk value:	        361 MB
+\# Available memory:	      9,428 MB
+\# System memory:	     12,359 MB
+\# Maximum memory size:	     12,067 MB
+\# Max mem available:	      9,497 MB
+\# Initial memory used:	         69 MB
+\#        process size:	        880 MB
+\# Qt version:		4.8.5
+\# Window Manager:	other
+\# User Name:		WXL
+\o Working Directory:	wxl-pc:/data/Project/study/lab3
+\# Process Id:		114687
+\o 
+\o COPYRIGHT © 1992-2015  CADENCE DESIGN SYSTEMS INC.  ALL RIGHTS RESERVED.
+\o           © 1992-2015  UNIX SYSTEMS Laboratories INC.,
+\o                          Reproduced with permission.
+\o 
+\o This Cadence Design Systems program and online documentation are
+\o proprietary/confidential information and may be disclosed/used only
+\o as authorized in a license agreement controlling such use and disclosure.
+\o 
+\o           RESTRICTED RIGHTS NOTICE (SHORT FORM)
+\o Use/reproduction/disclosure is subject to restriction
+\o set forth at FAR 1252.227-19 or its equivalent.
+\o Loading geView.cxt 
+\o Loading menuBuilder.cxt 
+\o Loading schView.cxt 
+\o Loading selectSv.cxt 
+\o Loading wireEdit.cxt 
+\o Loading pte2.cxt 
+\o Loading xlUI.cxt 
+\o Loading auCore.cxt 
+\o Loading vhdl.cxt 
+\o Loading seismic.cxt 
+\o Loading ci.cxt 
+\o Loading ams.cxt 
+\o Loading oasis.cxt 
+\o Loading analog.cxt 
+\o Loading asimenv.cxt 
+\o Loading socket.cxt 
+\o Loading dal.cxt 
+\o Loading awv.cxt 
+\o Loading par.cxt 
+\o Loading alvs.cxt 
+\o Loading caa.cxt 
+\o Loading adexl.cxt 
+\o *Info*    Exporting services from client ... 
+\o 
+\o //
+\o //  Calibre Skill Interface * (v2015.2_36.27) *
+\o //
+\o //                 Copyright Mentor Graphics Corporation 2005
+\o //                             All Rights Reserved.
+\o //         THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+\o //            WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION
+\o //              OR ITS LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+\o //
+\o //
+\o *Info*    Client has finished starting ... 
+\o 
+\p > 
+\a _treeSetOpcGUI(t)
+\r t
+\# Available memory:          9,411 MB at UTC 2026.06.04 03:40:56.993
+\# Memory report: Maximum memory size now 9,596 MB at UTC 2026.06.04 03:40:56.994
+\# Memory report: using         185 MB, process size 1,127 MB at UTC 2026.06.04 03:40:56.994
+\o Job 0 timed out after no activity in 300 seconds.
+\o Loading lce.cxt 
+\# Memory report: on exit            186 MB, process size 1,127 MB at UTC 2026.06.04 03:45:47.769
+\# Memory report: peak usage         186 MB, process size 1,127 MB

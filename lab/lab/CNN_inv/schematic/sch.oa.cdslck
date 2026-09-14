@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      WXL
+HostName                       wxl-pc
+ProcessIdentifier              4833
+ProcessCreationTime_UTC        1781018040
+ProcessCreationTime_Readable   Tue Jun  9 23:14:00 2026 CST
+AppIdentifier                  OA File System Design Manager
+OSType                         unix
+ReasonForPlacingEditLock       OpenAccess edit lock
+FilePathUsedToEditLock         /data/Project/study/lab3/lab3/CNN_inv/schematic/sch.oa.cdslck.dirlck
+TimeEditLocked                 Tue Jun  9 23:14:12 2026 CST

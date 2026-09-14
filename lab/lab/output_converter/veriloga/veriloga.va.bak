@@ -1,0 +1,14 @@
+// VerilogA for lab3, output_converter, veriloga
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module output_converter;
+parameter real tr = 5e-11 ;
+parameter real vth = 0.9 ;
+parameter real y_lsb = 1 ;
+parameter real vlsb = 0.002 ;
+parameter real vagnd = 0.747975 ;
+
+
+endmodule

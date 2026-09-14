@@ -1,0 +1,1 @@
+("inv_adder:/\tinv_adder lab3 maestro" (("open" (nil hierarchy "/{lab3 inv_adder maestro }:a"))) nil)("inv_adder:/\tinv_adder lab3 schematic" (("open" (nil hierarchy "/{lab3 inv_adder schematic }:a"))) (((-15.35 -19.6125) (28.6375 3.475)) "a" "Schematics" 7))

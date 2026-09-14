@@ -1,0 +1,28 @@
+`include "constants.vams"
+`include "disciplines.vams"
+
+module x_to_vin_2x3(
+    x11, x12, x13, x21, x22, x23,
+    vin_11, vin_12, vin_13, vin_21, vin_22, vin_23
+);
+
+input x11, x12, x13, x21, x22, x23;
+output vin_11, vin_12, vin_13, vin_21, vin_22, vin_23;
+
+electrical x11, x12, x13, x21, x22, x23;
+electrical vin_11, vin_12, vin_13, vin_21, vin_22, vin_23;
+
+parameter real x_lsb = 1.0;        // x  1V  1
+parameter real vin_lsb = 20e-3;    // inv_adder  20mV  1
+
+analog begin
+    V(vin_11) <+ V(x11) * vin_lsb / x_lsb;
+    V(vin_12) <+ V(x12) * vin_lsb / x_lsb;
+    V(vin_13) <+ V(x13) * vin_lsb / x_lsb;
+
+    V(vin_21) <+ V(x21) * vin_lsb / x_lsb;
+    V(vin_22) <+ V(x22) * vin_lsb / x_lsb;
+    V(vin_23) <+ V(x23) * vin_lsb / x_lsb;
+end
+
+endmodule

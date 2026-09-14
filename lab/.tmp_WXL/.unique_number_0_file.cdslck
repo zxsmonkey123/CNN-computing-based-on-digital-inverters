@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      WXL
+HostName                       wxl-pc
+ProcessIdentifier              109504
+ProcessCreationTime_UTC        1780540356
+ProcessCreationTime_Readable   Thu Jun  4 10:32:36 2026 CST
+AppIdentifier                  /opt/Cadence/IC617/tools.lnx86/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       Lock file for generating unique number for ICRP command and log file directories.
+FilePathUsedToEditLock         /data/Project/study/lab3/.tmp_WXL/.unique_number_0_file
+TimeEditLocked                 Thu Jun  4 11:40:34 2026 CST

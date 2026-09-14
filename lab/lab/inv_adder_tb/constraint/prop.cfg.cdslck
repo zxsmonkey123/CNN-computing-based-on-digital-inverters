@@ -1,0 +1,16 @@
+#
+# Edit Lock-Stake file. CAUTION: Please do not change.
+#
+# Information about current Edit Lock Owner.
+#
+LockStakeVersion               1.1
+LoginName                      WXL
+HostName                       wxl-pc
+ProcessIdentifier              4270
+ProcessCreationTime_UTC        1781007105
+ProcessCreationTime_Readable   Tue Jun  9 20:11:45 2026 CST
+AppIdentifier                  /opt/Cadence/IC617/tools.lnx86/dfII/bin/64bit/virtuoso
+OSType                         lnx86
+ReasonForPlacingEditLock       
+FilePathUsedToEditLock         /data/Project/study/lab3/lab3/inv_adder_tb/constraint/prop.cfg
+TimeEditLocked                 Tue Jun  9 20:36:58 2026 CST
