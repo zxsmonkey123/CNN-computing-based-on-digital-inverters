@@ -29,6 +29,28 @@ Output matrix:    y11 y12
 
 Each output is calculated from two adjacent input values and the two kernel weights.
 
+## Circuit Diagrams
+
+### Top-Level CNN Module
+
+![Top-level CNN module](docs/images/cnn-top-level.png)
+
+### System Architecture
+
+![CNN system architecture](docs/images/system-architecture.png)
+
+### Inverter-Based Multiply-Accumulate Core
+
+![Inverter-based multiply-accumulate core](docs/images/inv-adder-core.png)
+
+### Switched-Capacitor Weight Array
+
+![Switched-capacitor weight array](docs/images/switched-capacitor-array.png)
+
+### CNN Testbench
+
+![CNN testbench](docs/images/cnn-testbench.png)
+
 ## Interfaces and Key Parameters
 
 ### Input Converter
@@ -107,6 +129,8 @@ The average simulated supply current is approximately `0.528 mA`, below the `8 m
 ```text
 .
 ├── README.md
+├── docs/
+│   └── images/           # Circuit diagrams used in this README
 └── lab/
     ├── cds.lib
     ├── CNN_inv/          # Convolution core
